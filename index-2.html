@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thicktea IT Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="w-full py-4 px-6 flex justify-between items-center border-b">
+    <h1 class="text-xl font-bold text-blue-600">Thicktea Data Services</h1>
+    <a href="#signup" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Sign Up</a>
+  </header>
+
+  <section class="text-center py-16 px-6">
+    <h2 class="text-4xl font-bold mb-4">Affordable Data Bundles for Everyone</h2>
+    <p class="text-lg text-gray-600 mb-6">Choose from MTN, Telecel, and AirtelTigo packages. Stay connected anytime, anywhere.</p>
+    <a href="#signup" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+  </section>
+
+  <section class="grid md:grid-cols-3 gap-8 px-6 py-12 max-w-6xl mx-auto">
+    <div class="p-6 border rounded-lg shadow-sm">
+      <h3 class="font-semibold text-xl mb-2">Reliable Networks</h3>
+      <p class="text-gray-600">We offer bundles across the top networks in Ghana: MTN, Telecel, and AirtelTigo.</p>
+    </div>
+    <div class="p-6 border rounded-lg shadow-sm">
+      <h3 class="font-semibold text-xl mb-2">Affordable Packages</h3>
+      <p class="text-gray-600">From light browsing to heavy streaming, find a bundle that suits your budget.</p>
+    </div>
+    <div class="p-6 border rounded-lg shadow-sm">
+      <h3 class="font-semibold text-xl mb-2">Fast Sign Up</h3>
+      <p class="text-gray-600">Sign up in seconds and explore packages instantly — no hassle.</p>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Our Data Packages</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 bg-white border rounded-lg shadow-sm text-center">
+        <h3 class="text-xl font-semibold text-yellow-500 mb-4">MTN Bundles</h3>
+        <p class="text-gray-600 mb-4">Starting from 1GB-100GB</p>
+        <a href="#signup" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Sign Up for MTN</a>
+      </div>
+      <div class="p-6 bg-white border rounded-lg shadow-sm text-center">
+        <h3 class="text-xl font-semibold text-red-500 mb-4">Telecel Bundles</h3>
+        <p class="text-gray-600 mb-4">Starting from 5GB-100GB</p>
+        <a href="#signup" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Sign Up for Telecel</a>
+      </div>
+      <div class="p-6 bg-white border rounded-lg shadow-sm text-center">
+        <h3 class="text-xl font-semibold text-purple-500 mb-4">AirtelTigo Bundles</h3>
+        <p class="text-gray-600 mb-4">Starting from 1GB-100GB</p>
+        <a href="#signup" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">Sign Up for AirtelTigo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup" class="py-16 px-6 max-w-lg mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-6">Sign Up to Get Started</h2>
+    <form id="signupForm" onsubmit="sendToWhatsApp(event)" class="space-y-4 bg-white p-6 border rounded-lg shadow">
+      <input id="name" type="text" placeholder="Full Name" class="w-full p-3 border rounded" required>
+      <input id="email" type="email" placeholder="Email Address" class="w-full p-3 border rounded" required>
+      <input id="phone" type="tel" placeholder="Phone Number" class="w-full p-3 border rounded" required>
+
+      <select id="provider" class="w-full p-3 border rounded" required>
+        <option value="">Select Network</option>
+        <option value="MTN" selected>MTN</option>
+        <option value="Telecel">Telecel</option>
+        <option value="AirtelTigo">AirtelTigo</option>
+      </select>
+
+      <select id="dataSize" class="w-full p-3 border rounded" required>
+        <option value="">Select Data Size (GB)</option>
+      </select>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition">Sign Up</button>
+    </form>
+
+    <div id="thankYou" class="hidden text-center mt-6 p-4 bg-green-100 border border-green-300 rounded-lg">
+      <h3 class="text-xl font-semibold text-green-700 mb-2">✅ Thank you!</h3>
+      <p class="text-green-700">Your details were captured. A WhatsApp chat has opened so we can continue there.</p>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6 md:flex md:justify-between md:items-center">
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        <p>&copy; 2025 Thicktea Data. All rights reserved.</p>
+      </div>
+      <div class="flex justify-center md:justify-end space-x-6">
+        <a href="#" class="hover:text-blue-400 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.992 3.66 9.176 8.448 9.873V14.86h-2.186V12.784h2.186v-1.638c0-2.16 1.32-3.342 3.256-3.342 0.923 0 1.713 0.165 1.944 0.19v2.21h-1.306c-1.045 0-1.248 0.496-1.248 1.228v1.652h2.476l-0.404 2.076h-2.072v6.864c4.788-0.697 8.448-4.881 8.448-9.873C22 6.477 17.523 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584 0.012 4.858 0.071 1.181 0.055 1.928 0.25 2.597 0.509a4.27 4.27 0 0 1 1.54 0.999c0.449 0.449 0.817 0.95 0.999 1.54a4.27 4.27 0 0 1 0.509 2.597c0.059 1.274 0.071 1.654 0.071 4.858s-0.012 3.584-0.071 4.858a4.27 4.27 0 0 1-0.509 2.597c-0.182 0.59-0.55 1.091-0.999 1.54a4.27 4.27 0 0 1-1.54 0.999c-0.669 0.259-1.416 0.454-2.597 0.509-1.274 0.059-1.654 0.071-4.858 0.071s-3.584-0.012-4.858-0.071a4.27 4.27 0 0 1-2.597-0.509c-0.59-0.182-1.091-0.55-1.54-0.999a4.27 4.27 0 0 1-0.999-1.54c-0.259-0.669-0.454-1.416-0.509-2.597C2.175 15.584 2.163 15.204 2.163 12s0.012-3.584 0.071-4.858a4.27 4.27 0 0 1 0.509-2.597c0.182-0.59 0.55-1.091 0.999-1.54a4.27 4.27 0 0 1 1.54-0.999c0.669-0.259 1.416-0.454 2.597-0.509C8.416 2.175 8.796 2.163 12 2.163zm0 1.593c-3.111 0-3.486 0.011-4.708 0.067-1.127 0.052-1.785 0.237-2.186 0.384a2.67 2.67 0 0 0-0.985 0.655c-0.345 0.345-0.569 0.73-0.655 0.985c-0.147 0.401-0.332 1.059-0.384 2.186-0.056 1.222-0.067 1.597-0.067 4.708s0.011 3.486 0.067 4.708c0.052 1.127 0.237 1.785 0.384 2.186 0.086 0.255 0.31 0.64 0.655 0.985a2.67 2.67 0 0 0 0.985 0.655c0.401 0.147 1.059 0.332 2.186 0.384 1.222 0.056 1.597 0.067 4.708 0.067s3.486-0.011 4.708-0.067c1.127-0.052 1.785-0.237 2.186-0.384 0.255-0.086 0.64-0.31 0.985-0.655a2.67 2.67 0 0 0 0.655-0.985c0.147-0.401 0.332-1.059 0.384-2.186-0.056-1.222-0.067-1.597-0.067-4.708s0.011-3.486 0.067-4.708c-0.052-1.127-0.237-1.785-0.384-2.186a2.67 2.67 0 0 0-0.985-0.655c-0.401-0.147-1.059-0.332-2.186-0.384-1.222-0.056-1.597-0.067-4.708-0.067zm0 1.205c3.085 0 3.465 0.01 4.67 0.065 1.107 0.051 1.637 0.22 2.016 0.358a2.66 2.66 0 0 1 0.963 0.652c0.338 0.338 0.562 0.72 0.652 0.963 0.138 0.379 0.307 0.909 0.358 2.016 0.055 1.205 0.065 1.585 0.065 4.67s-0.01 3.465-0.065 4.67c-0.051 1.107-0.22 1.637-0.358 2.016a2.66 2.66 0 0 1-0.652 0.963c-0.338 0.338-0.72 0.562-0.963 0.652-0.379 0.138-0.909 0.307-2.016 0.358-1.205 0.055-1.585 0.065-4.67 0.065s-3.465-0.01-4.67-0.065c-1.107-0.051-1.637-0.22-2.016-0.358a2.66 2.66 0 0 1-0.963-0.652c-0.338-0.338-0.562-0.72-0.652-0.963-0.138-0.379-0.307-0.909-0.358-2.016-0.055-1.205-0.065-1.585-0.065-4.67s0.01-3.465 0.065-4.67c0.051-1.107 0.22-1.637 0.358-2.016a2.66 2.66 0 0 1 0.652-0.963c0.338-0.338 0.72-0.562 0.963-0.652 0.379-0.138 0.909-0.307 2.016-0.358C8.535 3.368 8.915 3.358 12 3.358zm0 1.233c-3.111 0-3.486 0.011-4.708 0.067-1.127 0.052-1.785 0.237-2.186 0.384a2.67 2.67 0 0 0-0.985 0.655c-0.345 0.345-0.569 0.73-0.655 0.985c-0.147 0.401-0.332 1.059-0.384 2.186-0.056 1.222-0.067 1.597-0.067 4.708s0.011 3.486 0.067 4.708c0.052 1.127 0.237 1.785 0.384 2.186 0.086 0.255 0.31 0.64 0.655 0.985a2.67 2.67 0 0 0 0.985 0.655c0.401 0.147 1.059 0.332 2.186 0.384 1.222 0.056 1.597 0.067 4.708 0.067s3.486-0.011 4.708-0.067c1.127-0.052 1.785-0.237 2.186-0.384 0.255-0.086 0.64-0.31 0.985-0.655a2.67 2.67 0 0 0 0.655-0.985c0.147-0.401 0.332-1.059 0.384-2.186-0.056-1.222-0.067-1.597-0.067-4.708s0.011-3.486 0.067-4.708c-0.052-1.127-0.237-1.785-0.384-2.186a2.67 2.67 0 0 0-0.985-0.655c-0.401-0.147-1.059-0.332-2.186-0.384-1.222-0.056-1.597-0.067-4.708-0.067zm0 1.205c3.085 0 3.465 0.01 4.67 0.065 1.107 0.051 1.637 0.22 2.016 0.358a2.66 2.66 0 0 1 0.963 0.652c0.338 0.338 0.562 0.72 0.652 0.963 0.138 0.379 0.307 0.909 0.358 2.016 0.055 1.205 0.065 1.585 0.065 4.67s-0.01 3.465-0.065 4.67c-0.051 1.107-0.22 1.637-0.358 2.016a2.66 2.66 0 0 1-0.652 0.963c-0.338 0.338-0.72 0.562-0.963 0.652-0.379 0.138-0.909 0.307-2.016 0.358-1.205 0.055-1.585 0.065-4.67 0.065s-3.465-0.01-4.67-0.065c-1.107-0.051-1.637-0.22-2.016-0.358a2.66 2.66 0 0 1-0.963-0.652c-0.338-0.338-0.562-0.72-0.652-0.963-0.138-0.379-0.307-0.909-0.358-2.016-0.055-1.205-0.065-1.585-0.065-4.67s0.01-3.465 0.065-4.67c0.051-1.107 0.22-1.637 0.358-2.016a2.66 2.66 0 0 1 0.652-0.963c0.338-0.338 0.72-0.562 0.963-0.652 0.379-0.138 0.909-0.307 2.016-0.358C8.535 3.368 8.915 3.358 12 3.358z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/66c06a4632ea5235886d34b4/1iuvq8tqg';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <script>
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const provider = document.getElementById('provider').value;
+      const dataSize = document.getElementById('dataSize').value;
+
+      // Capture and format the current date and time
+      const now = new Date();
+      const date = now.toLocaleDateString(); // e.g., "1/10/2024"
+      const time = now.toLocaleTimeString(); // e.g., "11:30:15 AM"
+
+      // Your WhatsApp number
+      const yourNumber = "233542114940";
+
+      // Message formatted nicely
+      const message = 
+        `*New Signup Lead* 🚀%0A%0A` +
+        `*Order Date:* ${date}%0A` +
+        `*Order Time:* ${time}%0A` +
+        `*Name:* ${name}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Interested in:* ${provider} Bundles%0A` +
+        `*Requested Size:* ${dataSize}`;
+
+      const url = `https://wa.me/${yourNumber}?text=${message}`;
+
+      // Open WhatsApp in new tab/window
+      window.open(url, '_blank');
+
+      // Show thank you message
+      document.getElementById('signupForm').classList.add('hidden');
+      document.getElementById('thankYou').classList.remove('hidden');
+    }
+
+    // Define price and data sizes for each network
+    const mtnBundles = [
+      { size: '1 GB', price: 'GHS 6' },
+    { size: '2 GB', price: 'GHS 12' },
+    { size: '3 GB', price: 'GHS 17' },
+    { size: '4 GB', price: 'GHS 22' },
+		   { size: '5 GB', price: 'GHS 27' },
+		   { size: '6 GB', price: 'GHS 32' },
+		   { size: '8 GB', price: 'GHS 42' },
+		   { size: '10 GB', price: 'GHS 50' },
+		   { size: '15 GB', price: 'GHS 75' },
+		   { size: '20 GB', price: 'GHS 95' },
+    ];
+
+    const telecelBundles = [
+      { size: '5 GB', price: 'GHS 27' },
+    { size: '10 GB', price: 'GHS 48' },
+    { size: '15 GB', price: 'GHS 65' },
+    { size: '20 GB', price: 'GHS 85' }
+    ];
+
+    const airtelTigoBundles = [
+     { size: '1 MB', price: 'GHS 5' },
+    { size: '2 GB', price: 'GHS 10' },
+    { size: '3 GB', price: 'GHS 15' },
+    { size: '4 GB', price: 'GHS 20' },
+    { size: '5 GB', price: 'GHS 23' },
+		   { size: '6 GB', price: 'GHS 26' },
+		   { size: '8 GB', price: 'GHS 25' },
+		   { size: '10 GB', price: 'GHS 45' },
+		   { size: '15 GB', price: 'GHS 65' },
+		   { size: '20 GB', price: 'GHS 86' },
+    ];
+
+    // Map network names to their bundle data
+    const bundlesByProvider = {
+      'MTN': mtnBundles,
+      'Telecel': telecelBundles,
+      'AirtelTigo': airtelTigoBundles
+    };
+
+    const providerSelect = document.getElementById('provider');
+    const dataSizeSelect = document.getElementById('dataSize');
+
+    // Function to update the data size dropdown
+    function updateDataSizes() {
+      const selectedProvider = providerSelect.value;
+      // Clear the current options
+      dataSizeSelect.innerHTML = '<option value="">Select Data Size (GB)</option>';
+
+      if (selectedProvider) {
+        // Get the array of bundles for the selected provider
+        const bundles = bundlesByProvider[selectedProvider];
+        // Loop through the bundles and create a new option for each
+        bundles.forEach(bundle => {
+          const option = document.createElement('option');
+          option.value = `${bundle.size} (${bundle.price})`;
+          option.textContent = `${bundle.size} - ${bundle.price}`;
+          dataSizeSelect.appendChild(option);
+        });
+      }
+    }
+
+    // Add an event listener to the provider dropdown
+    providerSelect.addEventListener('change', updateDataSizes);
+
+    // Call the function once the script loads to populate the dropdown initially
+    updateDataSizes();
+  </script>
+</body>
+</html>
